@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img src="Assets/Textures/Bricks.jpg" id="bricks"/>
+                <a-asset-item id="riggedfigure" src="Assets/Models/RiggedFigure.gltf"></a-asset-item>
+            </a-assets>
+            <a-box scale="10 10 10" color="yellow" side="double"></a-box>
+            <a-plane position="0 -4.9 0" rotation="-90 0 0" width="10" height="10" src="#bricks" ></a-plane>
+            <a-entity id="figure" gltf-model="#riggedfigure" position="0 -5 -4" scale="4 4 4" animation-mixer="loop: pingpong"/></a-entity>
+            <a-sky color="lightblue"></a-sky>
+            <a-light color="red" intensity="0.1" type="ambient"></a-light>
+            <a-light color="violet" intensity="5" type="point" position="0 3 0"></a-light>
+        </a-scene>
+    </body>
+</html>

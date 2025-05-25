@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="pine" src="Assets/Models/Pine.glb"></a-asset-item>
+                <a-asset-item id="house" src="Assets/Models/House.glb"></a-asset-item>
+            </a-assets>
+            <a-entity id="pine1" gltf-model="#pine" position="-1 0.2 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity id="house1" gltf-model="#house" position="1 0.5 0" scale="0.5 0.5 0.5" rotation="0 -90 0"></a-entity>
+            <a-sky color="lightblue"></a-sky>
+            <a-plane rotation="-90 0 0" color="brown" width="4" height="4"></a-plane>
+        </a-scene>
+    </body>
+</html>

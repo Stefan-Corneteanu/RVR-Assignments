@@ -1,0 +1,6 @@
+# VRLesson3
+VRLesson3 expands on Lesson1 by adding dynamic behavior to the primitives using Javascript, Three.js, A-FRAME components and events
+
+The boxes of Flag.html have a new component called "dynamiccolor" which takes 4 parameters: the starting and ending colors, the transition speed, and a looping behavior which can take one of 3 values: None (once the end color is reached it stops), Repeat (once the end color is reached it resets to the start color) and Pingpong (once the end color is reached, the transition speed is negated and the color returns to the start color). This component takes advantage of the fact that A-FRAME is a WebVR framework built on top of Three js, by working directly with its color and vec3 datatypes
+
+The figure from Stickman.html was slightly altered, so that its arms are represented by a single cylinder, to which the new "wave" component was added. This component waits 5 seconds or until the mouseenter event was triggered to start rotating the Stickman's arms. In order to be able to trigger the mouseenter event, a custom camera containing a raycaster was defined (requiring the inclusion of aframe-gui)

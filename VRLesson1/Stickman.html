@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!--Right Leg-->
+            <a-cylinder position="0 1 -1" rotation="0 0 15" radius="0.1" height="2" color="#191919"></a-cylinder>
+            <!--Left Leg-->
+            <a-cylinder position="-0.5 1 -1" rotation="0 0 -15" radius="0.1" height="2" color="#191919"></a-cylinder>
+            <!--Body-->
+            <a-cylinder position="-0.25 2.5 -1" radius="0.1" height="1.5" color="#191919"></a-cylinder>
+            <!--Right Arm-->
+            <a-cylinder position="0.15 2.65 -1" rotation="0 0 35" radius="0.1" height="1.5" color="#191919"></a-cylinder>
+            <!--Left Arm-->
+            <a-cylinder position="-0.65 2.65 -1" rotation="0 0 -35" radius="0.1" height="1.5" color="#191919"></a-cylinder>
+            <!--Head-->
+            <a-sphere position="-0.25 4 -1" radius="0.5" color="beige"></a-sphere>
+            <!--Left Eye-->
+            <a-sphere position="-0.5 4 -0.58" radius="0.1" color="#191919"></a-sphere>
+            <!--Right Eye-->
+            <a-sphere position="0 4 -0.58" radius="0.1" color="#191919"></a-sphere>
+            <!--Mouth-->
+            <a-cylinder position="-0.25 3.7 -0.68" rotation="0 0 -90" radius="0.1" height="0.5" color="#191919"></a-cylinder>
+            <!--Sky Box-->
+            <a-sky color="lightblue"></a-sky>
+            <!--Ground-->
+            <a-plane position="0 0 0" rotation="-90 0 0" color="brown" width="4" height="4"></a-plane>
+        </a-scene>
+    </body>
+</html>

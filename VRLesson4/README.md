@@ -1,0 +1,2 @@
+# VRLesson4
+VRLesson4 focuses on GUI elements. The GUI of index.html consists of a panel, a text and 3 colored buttons. These buttons will change the color of a box in the scene, with a maximum of 3 color changes. When a button was clicked, the GUI text will also change to reflect the new color of the box, or to notify that no more changes are allowed. This behavior is defined in the onClickColorChange function, triggered by the onclick listener of the buttons.

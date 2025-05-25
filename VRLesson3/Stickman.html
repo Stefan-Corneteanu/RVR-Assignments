@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Usage of aframe 0.8.0 and aframe-gui required for the mouseenter trigger-->
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+        <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+        <script src="Scripts/Wave.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!--Camera with raycaster-->
+            <a-entity id="rig" movement-controls>
+                <a-entity camera position="0 0.5 0" look-controls="pointerLockEnabled: true">
+                    <a-gui-cursor id="cursor" fuse="true" fuse-timeout="2000" design="dot"></a-gui-cursor>
+                </a-entity>
+            </a-entity>
+
+            <!--Right Leg-->
+            <a-cylinder position="0 1 -1" rotation="0 0 15" radius="0.1" height="2" color="#191919"></a-cylinder>
+            <!--Left Leg-->
+            <a-cylinder position="-0.5 1 -1" rotation="0 0 -15" radius="0.1" height="2" color="#191919"></a-cylinder>
+            <!--Body-->
+            <a-cylinder position="-0.25 2.5 -1" radius="0.1" height="1.5" color="#191919"></a-cylinder>
+            <!--Arms-->
+            <a-cylinder position="-0.25 2.65 -1" rotation="0 0 -75" radius="0.1" height="3" color="#191919" wave></a-cylinder>
+            <!--Head-->
+            <a-sphere position="-0.25 4 -1" radius="0.5" color="beige"></a-sphere>
+            <!--Left Eye-->
+            <a-sphere position="-0.5 4 -0.58" radius="0.1" color="#191919"></a-sphere>
+            <!--Right Eye-->
+            <a-sphere position="0 4 -0.58" radius="0.1" color="#191919"></a-sphere>
+            <!--Mouth-->
+            <a-cylinder position="-0.25 3.7 -0.68" rotation="0 0 -90" radius="0.1" height="0.5" color="#191919"></a-cylinder>
+            <!--Sky Box-->
+            <a-sky color="lightblue"></a-sky>
+            <!--Ground-->
+            <a-plane position="0 0 0" rotation="-90 0 0" color="brown" width="4" height="4"></a-plane>
+        </a-scene>
+    </body>
+</html>
